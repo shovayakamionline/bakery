@@ -14,17 +14,18 @@ function onLoad() {
         let rating = reviewDetail["rating"];
         let reviewText = reviewDetail["reviewText"];
 
-        let reviewCard = document.getElementById("review-card")
+        let reviewCard = $("#review-card").get(0);
         let newReviewCard = reviewCard.cloneNode(true);
         let tagElement = newReviewCard.getElementsByClassName("tag")[0];
         tagElement.textContent = rating;
+        // Apply regular expression to replace the digit in css class name.
         tagElement.className = tagElement.className.replace(/\d/, rating + '')
 
         newReviewCard.getElementsByClassName("review-card-title")[0].textContent = title;
         newReviewCard.getElementsByClassName("review-card-attribute")[0].textContent = reviewText;
         newReviewCard.getElementsByClassName("review-card-username")[0].textContent = "- "+ username;
 
-        document.getElementById("review-container").appendChild(newReviewCard);
+        $("#review-container").get(0).appendChild(newReviewCard);
 
     });
 }
