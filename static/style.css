@@ -122,4 +122,18 @@
         /* 8px / 16px = 0.5 = 50% */
         font-size: 50%;
     }
+    .cake {
+        max-width: 110rem;
+    }
+}
+
+@media (max-width: 30em) {
+    html {
+        /* 8px / 16px = 0.5 = 50% */
+        font-size: 25%;
+    }
+
+    .cake {
+        max-width: 90rem;
+    }
 }
